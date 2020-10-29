@@ -1,6 +1,8 @@
 let currentID = 1;
-let currentSprite = 0;
+// let currentSprite = 0;
 
+//source https://www.youtube.com/watch?v=tFVdxGgJPCo
+//le code en commentaire ci-dessous permet d'aller chercher les data sur l'api mais pas de changer d'id en JS
 // creation of an object
 // function apiData = {
 // 	url: 'https://pokeapi.co/api/v2',  //pokeapi url
@@ -65,7 +67,7 @@ function generateHtml(getData) {
 		<div id="details">
 			<span>Height : ${getData.height} - </span>
 			<span>Weight : ${getData.weight} </span>
-		</div>getData
+		</div>
 	`
 	let pokemonDiv = document.querySelector('.pokemon') //we take the pokemon class from the html
 	pokemonDiv.innerHTML = html //all the api data will appear on the html
@@ -91,20 +93,20 @@ pad_button_bottom.addEventListener('click', () => {
 	getData(currentID)
   });
 
-/* left and right buttons to change the sprites of the pokemon */
-pad_button_right.addEventListener('click', () => {
-	currentSprite = currentSprite + 1;
-	currentSprite = (currentSprite <= 0) ? 0 : currentSprite;
-	changeSprite();
-	getData(currentID)
-});
+// /* left and right buttons to change the sprites of the pokemon */
+// pad_button_right.addEventListener('click', () => {
+// 	currentSprite = currentSprite + 1;
+// 	currentSprite = (currentSprite <= 0) ? 0 : currentSprite;
+// 	changeSprite();
+// 	getData(currentID)
+// });
   
-pad_button_left.addEventListener('click', () => {
-	currentSprite = currentSprite - 1;
-	currentSprite = (currentSprite <= 0) ? 0 : currentSprite;
-	changeSprite();
-	getData(currentID)
-});
+// pad_button_left.addEventListener('click', () => {
+// 	currentSprite = currentSprite - 1;
+// 	currentSprite = (currentSprite <= 0) ? 0 : currentSprite;
+// 	changeSprite();
+// 	getData(currentID)
+// });
   
 // b_button.addEventListener('click', () => {
 // 	if(greetings.style.display == 'none') {
