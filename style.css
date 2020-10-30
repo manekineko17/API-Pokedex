@@ -1,28 +1,18 @@
-/* @import "responsive.css";
-
-@media (min-width: 320px) {
-  #bottom, #top {
-    display: none;}
-} */
-
-
-
-
-
-
 *{
     margin:0;
      padding:0;
 }
 
 html, body {
-    height: 100%;
+    /* height: 100%; */
     margin: 0;
     padding: 0;
+    height: max-content;
 }
 
 body {
-    height: 100%;
+    /* height: 100%; */
+    height: max-content;
     font-family: Verdana, sans-serif; 
     font-size: 120%;
     display: flex;
@@ -35,13 +25,30 @@ body {
 
 main{
     width: 100%;
-    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    background-color: gray;
 }
 
-header{
+/* header{
     background-color: transparent;
     text-align: center;
     width: 100%;
+} */
+
+#fond_rouge_blanc{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 100%;
+
 }
 
 .pokemon{
@@ -56,7 +63,7 @@ header{
     color: black;
     background-color: white;
     max-width: 80%;
-    height: auto;
+    height: 160px;
     margin: 10% 5% 10% 5%;
     padding: 50% 5% 50% 5%;
     text-align: center;
@@ -66,9 +73,9 @@ header{
     flex-direction: column;
     justify-content: center;
 }
-
 #image_pokemon{
     width: 100px;
+    /* width: 300px; */
     height: auto;
 }
 #name{
@@ -82,95 +89,102 @@ header{
     justify-content: center;
 }
 
-#fond_rouge{
-    position: absolute;
+#fond_rayures{
+    /* position: relative; */
     z-index: 2;     /* fond_rouge au-dessus de fond blanc */
     background: repeating-linear-gradient(-45deg, red, red 5px, white 5px, white 15px);
     border-bottom: 5px solid black;
     width: 100%;
-    height: 50%;
+    height: 20em; 
 }
 
-/* #fond_blanc{
-    background-color: white;
-    position: relative;
+#fond_blanc{
+    background-color: yellow;
+    /* position: relative; */
     z-index: 1;
-    height: 8em;
-} */
+    height: 16em; 
+}
 
+#buttons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-end;
+    align-items: flex-start;
+    margin-top: 2em;
+}
 
 #pad {
-    z-index: 4;
-    top: 411px;
-    position: relative;
-    width: 106px;
-    height: 108px;
-    /* opacity: 0; */
+    flex: 1;
+    z-index: 3;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    align-content: flex-end;
+    /* position: relative; */
+    width: 155px;
+    height: 160px;
+    margin-right: 2em;
 }
 
 #pad_top {
-background-color: lightgrey;
-height: 35px;
-width: inherit;
-display: flex;
-justify-content: center;
+    background-color: transparent;
+    height: 50px;
+    width: inherit;
+    display: flex;
+    justify-content: center;
 }
-  
 #pad_button_top {
-background-color: black;
-border-radius: 3px 3px 0 0 ;
-height: 36px;
-width: 40px;
-cursor: pointer;
+    background-color: black;
+    border-radius: 3px 3px 0 0 ;
+    height: 52px;
+    width: 52px;
+    cursor: pointer;
 }
-  
 #pad_center {
-background-color: lightgrey;
-height: 35px;
-width: inherit;
-display: flex;
-justify-content: space-between;
+    background-color: transparent;
+    height: 52px;
+    width: inherit;
+    display: flex;
+    justify-content: space-between;
 }
-
 #pad_button_right {
-background-color: black;
-border-radius: 0 3px 3px 0;
-height: 35px;
-width: 34px;
-cursor: pointer;
+    background-color: black;
+    border-radius: 0 3px 3px 0;
+    height: 52px;
+    width: 52px;
+    cursor: pointer;
 }
-  
 #pad_button_left {
-background-color: black;
-border-radius: 3px 0 0 3px;
-height: 35px;
-width: 34px;
-cursor: pointer;
+    background-color: black;
+    border-radius: 3px 0 0 3px;
+    height: 52px;
+    width: 52px;
+    cursor: pointer;
 }
-
 #pad_bottom {
-background-color: lightgrey;
-height: 38px;
-width: inherit;
-display: flex;
-justify-content: center;
+    background-color: transparent;
+    height: 52px;
+    width: inherit;
+    display: flex;
+    justify-content: center;
 }
-
 #pad_button_bottom {
-background-color: black;
-border-radius: 0 0 3px 3px ;
-height: 36px;
-width: 40px;
-cursor: pointer;
+    background-color: black;
+    border-radius: 0 0 3px 3px ;
+    height: 52px;
+    width: 52px;
+    cursor: pointer;
 } 
 
 #gb_buttons{
-    background-color: grey;
-    z-index: 4;
+    flex: 2;
+    background-color: transparent;
     display: flex;
-    position: absolute;
-    width: 120px;
-    height: 85px;
+    width: 150px;
+    height: 105px;
     left: 245px;
     top: 415px;
     opacity: 0.5;
@@ -179,8 +193,8 @@ cursor: pointer;
 #b_button {
     background-color: black;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
     opacity: 0.8;
     border-radius: 50%;
     align-self: flex-end;
@@ -189,8 +203,8 @@ cursor: pointer;
 #a_button {
     background-color: black;
     cursor: pointer;
-    width: 50px;
-    height: 50px;
+    width: 65px;
+    height: 65px;
     opacity: 0.8;
     border-radius: 50%;
     margin-left: 18px;
@@ -198,11 +212,221 @@ cursor: pointer;
 }
 
 
-footer{
+/* footer{
     z-index: 3;
     background-color: gray;
     width: 100%;
     position: relative;;
     bottom:0;
     height: 50px;
+} */
+
+/*******************************************/
+
+/*mobile :on screens that are 375px or less*/
+@media /*screen*/ all and (max-device-width: 480px) { //avant : 375px
+}
+
+/*******************************************/
+
+/*tablet :on screens that are min 376px, set the followings*/
+@media screen and (max-width: 1094px) and (min-width: 834px) {
+
+    body {
+        font-size: 200%;
+    }
+    #fond_rouge_blanc{
+        /* height: 100%; */
+    }
+    
+    .pokemon{
+        border-width: 8px;
+        margin: 2em;
+    }
+    #image_and_name{
+        margin: 0;
+        padding: 0;
+    }
+    #image_pokemon{
+        width: 15em;
+    }
+    #name{
+        font-size: 45px;
+        margin-bottom: 2em;
+    }
+    /* #details{
+        justify-content: center;
+    } */
+        #fond_rouge{
+        background: repeating-linear-gradient(-45deg, red, red 8px, white 5px, white 23px);
+        border-bottom: 8px solid black;
+        height: 25em; 
+    }
+    #fond_blanc{
+        height: 25em;
+    }
+    #buttons {
+        margin-top: 2em;
+    }
+    #pad {
+        width: 300px;
+        height: 300px;
+        margin-right: 2em;
+        margin-top: -2em;
+    }
+    #pad_top {
+        height: 100px;
+    }
+    #pad_button_top {
+        height: 100px;
+        width: 100px;
+    }
+    #pad_center {
+        height: 100px;
+    }
+    #pad_button_right {
+        height: 100px;
+        width: 100px;
+        margin-left: 1em;
+    }
+    #pad_button_left {
+        height: 100px;
+        width: 100px;
+        margin-right: 1em;
+
+    }
+    #pad_bottom {
+        height: 100px;
+    }
+    #pad_button_bottom {
+        height: 100px;
+        width: 100px;
+    } 
+    
+    #gb_buttons{
+        width: 300px;
+        height: 300px;
+        margin-top: -3em;
+    }
+    #b_button {
+        width: 130px;
+        height: 130px;
+    }
+    #a_button {
+        width: 130px;
+        height: 130px;
+        margin-top: 1em;
+    }
+}
+    
+    /****************************************************/
+
+/*desktop: on screens that are 1094px or more, set the followings */
+@media screen and (min-width: 1094px) {
+    body {
+        font-size: 120%;
+    }
+    
+    #fond_rouge_blanc{
+        height: 100%;
+    }
+    
+    .pokemon{
+        border-width: 5px;
+        border-radius: 12px;
+        max-width: 80%;
+        margin: 10% 5% 10% 5%;
+        padding: 50% 5% 50% 5%;
+    }
+    #image_name{
+
+    }
+    #image_pokemon{
+        width: 100px;
+        /* width: 300px; */
+        height: auto;
+    }
+    #name{
+        font-size: 25px;
+    }
+    #details{
+        justify-content: center;
+    }
+    
+    #fond_rouge{
+        background: repeating-linear-gradient(-45deg, red, red 5px, white 5px, white 15px);
+        border-bottom: 5px solid black;
+        height: 16em; /* à modifier pour responsive */
+    }
+    
+    #fond_blanc{
+        height: 15em; /* à modifier pour responsive */
+    }
+    
+    #buttons {
+        margin-top: 2em;
+    }
+    
+    #pad {
+        width: 106px;
+        height: 108px;
+        margin-right: 2em;
+    }
+    
+    #pad_top {
+        height: 35px;
+    }
+      
+    #pad_button_top {
+        border-radius: 3px 3px 0 0 ;
+        height: 36px;
+        width: 40px;
+    }
+      
+    #pad_center {
+        height: 35px;
+    }
+    
+    #pad_button_right {
+        border-radius: 0 3px 3px 0;
+        height: 35px;
+        width: 34px;
+    }
+      
+    #pad_button_left {
+        border-radius: 3px 0 0 3px;
+        height: 35px;
+        width: 34px;
+    }
+    
+    #pad_bottom {
+        height: 38px;
+    }
+    
+    #pad_button_bottom {
+        border-radius: 0 0 3px 3px ;
+        height: 36px;
+        width: 40px;
+    } 
+    
+    #gb_buttons{
+        width: 120px;
+        height: 85px;
+        left: 245px;
+        top: 415px;
+    }
+      
+    #b_button {
+        width: 50px;
+        height: 50px;
+    }
+    
+    #a_button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: 18px;
+        margin-top: 3px;
+    }
+
 }

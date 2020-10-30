@@ -60,7 +60,7 @@ getData(currentID)
 function generateHtml(getData) {
 	console.log(getData)
 	let html = `
-		<div id="image_name">
+		<div id="image_and_name">
 			<img id="image_pokemon" src=${getData.sprites.front_default} alt="Pokemon picture">
 			<p id="name">${getData.name}</p>
 		</div>
@@ -77,7 +77,7 @@ function generateHtml(getData) {
 ////////////////////////////// ci-dessous code source https://codepen.io/victorharry/pen/vYNorav ///////
 
 /* top and bottom buttons to change the id of the pokemon */
-pad_button_top.addEventListener('click', () => {  
+pad_button_right.addEventListener('click', () => {  
 	currentID = currentID + 1;
 	let apiUrl = `https://pokeapi.co/api/v2/pokemon/${currentID}`  
 	fetch(apiUrl);
@@ -85,7 +85,7 @@ pad_button_top.addEventListener('click', () => {
 	getData(currentID)
  });
   
-pad_button_bottom.addEventListener('click', () => {
+pad_button_left.addEventListener('click', () => {
 	currentID = currentID - 1;
 	let apiUrl = `https://pokeapi.co/api/v2/pokemon/${currentID}`  
 	fetch(apiUrl);
