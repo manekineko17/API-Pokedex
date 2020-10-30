@@ -31,14 +31,8 @@ main{
     justify-content: space-between;
     align-content: center;
     align-items: center;
-    background-color: gray;
+    background-color: white;
 }
-
-/* header{
-    background-color: transparent;
-    text-align: center;
-    width: 100%;
-} */
 
 #fond_rouge_blanc{
     display: flex;
@@ -57,6 +51,7 @@ main{
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
+    align-items: center;
     border-style: solid;
     border-width: 5px;
     border-radius: 12px;
@@ -67,30 +62,22 @@ main{
     margin: 10% 5% 10% 5%;
     padding: 50% 5% 50% 5%;
     text-align: center;
-}
-#image_name{
-    flex: 1;
-    flex-direction: column;
-    justify-content: center;
+    font-size: 30px;
 }
 #image_pokemon{
-    width: 100px;
-    /* width: 300px; */
+    width: 300px;
     height: auto;
 }
 #name{
-    font-size: 25px;
+    font-size: 40px;
     font-weight: bold;
     text-transform: uppercase;
 }
-#details{
-    flex: 2;
-    flex-direction: row;
-    justify-content: center;
+#height, #weight{
+    margin-top: 1em;
 }
 
 #fond_rayures{
-    /* position: relative; */
     z-index: 2;     /* fond_rouge au-dessus de fond blanc */
     background: repeating-linear-gradient(-45deg, red, red 5px, white 5px, white 15px);
     border-bottom: 5px solid black;
@@ -99,14 +86,13 @@ main{
 }
 
 #fond_blanc{
-    background-color: yellow;
-    /* position: relative; */
     z-index: 1;
     height: 16em; 
 }
 
 #buttons {
     display: flex;
+    z-index: 3;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -117,13 +103,10 @@ main{
 
 #pad {
     flex: 1;
-    z-index: 3;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: space-around; */
     align-content: flex-end;
-    /* position: relative; */
     width: 155px;
     height: 160px;
     margin-right: 2em;
@@ -212,15 +195,6 @@ main{
 }
 
 
-/* footer{
-    z-index: 3;
-    background-color: gray;
-    width: 100%;
-    position: relative;;
-    bottom:0;
-    height: 50px;
-} */
-
 /*******************************************/
 
 /*mobile :on screens that are 375px or less*/
@@ -232,38 +206,28 @@ main{
 /*tablet :on screens that are min 376px, set the followings*/
 @media screen and (max-width: 1094px) and (min-width: 834px) {
 
-    body {
-        font-size: 200%;
-    }
-    #fond_rouge_blanc{
-        /* height: 100%; */
-    }
-    
     .pokemon{
         border-width: 8px;
-        margin: 2em;
+        font-size: 35px;
     }
     #image_and_name{
         margin: 0;
         padding: 0;
     }
     #image_pokemon{
-        width: 15em;
+        width: 400px;
+        height: auto;
     }
     #name{
         font-size: 45px;
-        margin-bottom: 2em;
     }
-    /* #details{
-        justify-content: center;
-    } */
-        #fond_rouge{
-        background: repeating-linear-gradient(-45deg, red, red 8px, white 5px, white 23px);
+    #fond_rayures{
+        background: repeating-linear-gradient(-45deg, red, red 7px, white 5px, white 23px);
         border-bottom: 8px solid black;
-        height: 25em; 
+        height: 26em; 
     }
     #fond_blanc{
-        height: 25em;
+        height: 28em;
     }
     #buttons {
         margin-top: 2em;
@@ -293,7 +257,6 @@ main{
         height: 100px;
         width: 100px;
         margin-right: 1em;
-
     }
     #pad_bottom {
         height: 100px;
@@ -302,7 +265,6 @@ main{
         height: 100px;
         width: 100px;
     } 
-    
     #gb_buttons{
         width: 300px;
         height: 300px;
@@ -323,110 +285,76 @@ main{
 
 /*desktop: on screens that are 1094px or more, set the followings */
 @media screen and (min-width: 1094px) {
-    body {
-        font-size: 120%;
-    }
-    
-    #fond_rouge_blanc{
-        height: 100%;
-    }
-    
     .pokemon{
-        border-width: 5px;
-        border-radius: 12px;
-        max-width: 80%;
-        margin: 10% 5% 10% 5%;
-        padding: 50% 5% 50% 5%;
-    }
-    #image_name{
-
+        width: min-content;
+        font-size: 40px;
+        border: 8px solid black;
     }
     #image_pokemon{
-        width: 100px;
-        /* width: 300px; */
-        height: auto;
+        width: 500px;
     }
     #name{
-        font-size: 25px;
+        font-size: 55px;
     }
-    #details{
-        justify-content: center;
+    #fond_rayures{
+        background: repeating-linear-gradient(-45deg, red, red 7px, white 5px, white 23px);
+        border-bottom: 8px solid black;
+        height: 38em; 
     }
-    
-    #fond_rouge{
-        background: repeating-linear-gradient(-45deg, red, red 5px, white 5px, white 15px);
-        border-bottom: 5px solid black;
-        height: 16em; /* à modifier pour responsive */
-    }
-    
     #fond_blanc{
-        height: 15em; /* à modifier pour responsive */
+        height: 17em;
     }
-    
     #buttons {
-        margin-top: 2em;
+        float: right;
+        margin-left: 36em;
+        margin-top: -6em;
     }
-    
     #pad {
-        width: 106px;
-        height: 108px;
+        width: 300px;
+        height: 300px;
         margin-right: 2em;
+        margin-top: -2em;
     }
-    
     #pad_top {
-        height: 35px;
+        height: 100px;
     }
-      
     #pad_button_top {
-        border-radius: 3px 3px 0 0 ;
-        height: 36px;
-        width: 40px;
+        height: 100px;
+        width: 100px;
     }
-      
     #pad_center {
-        height: 35px;
+        height: 100px;
     }
-    
     #pad_button_right {
-        border-radius: 0 3px 3px 0;
-        height: 35px;
-        width: 34px;
+        height: 100px;
+        width: 100px;
+        margin-left: 1em;
     }
-      
     #pad_button_left {
-        border-radius: 3px 0 0 3px;
-        height: 35px;
-        width: 34px;
+        height: 100px;
+        width: 100px;
+        margin-right: 1em;
     }
-    
     #pad_bottom {
-        height: 38px;
+        height: 100px;
     }
-    
     #pad_button_bottom {
-        border-radius: 0 0 3px 3px ;
-        height: 36px;
-        width: 40px;
+        height: 100px;
+        width: 100px;
     } 
-    
     #gb_buttons{
-        width: 120px;
-        height: 85px;
-        left: 245px;
-        top: 415px;
+        width: 300px;
+        height: 300px;
+        margin-top: -3em;
     }
-      
     #b_button {
-        width: 50px;
-        height: 50px;
+        width: 130px;
+        height: 130px;
     }
-    
     #a_button {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        margin-left: 18px;
-        margin-top: 3px;
+        width: 130px;
+        height: 130px;
+        margin-top: 1em;
     }
 
 }

@@ -63,11 +63,10 @@ function generateHtml(getData) {
 		<div id="image_and_name">
 			<img id="image_pokemon" src=${getData.sprites.front_default} alt="Pokemon picture">
 			<p id="name">${getData.name}</p>
+			<div id="height">Height : ${getData.height}</div>
+			<div id="weight">Weight : ${getData.weight}</div>
 		</div>
-		<div id="details">
-			<span>Height : ${getData.height} - </span>
-			<span>Weight : ${getData.weight} </span>
-		</div>
+
 	`
 	let pokemonDiv = document.querySelector('.pokemon') //we take the pokemon class from the html
 	pokemonDiv.innerHTML = html //all the api data will appear on the html
