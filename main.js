@@ -1,6 +1,8 @@
 let currentID = 1;
 let sprites = 0;
 let pokemonSprite = getData.sprites;
+let sound_1 = 'media/sound_1.mp3';
+let sound_2 = 'media/sound_2.mp3';
 
 function getData(currentID) {
 	let apiUrl = `https://pokeapi.co/api/v2/pokemon/${currentID}`  	
@@ -29,7 +31,25 @@ function generateHtml(getData) {
 	pokemonDiv.innerHTML = html //all the api data will appear on the html
 }
 
+/* right and left buttons change the id of the pokemon */
+pad_button_right.addEventListener('click', () => {  
+	currentID = currentID + 1;
+	let apiUrl = `https://pokeapi.co/api/v2/pokemon/${currentID}`  
+	fetch(apiUrl);
+	console.log(apiUrl)
+	getData(currentID)
+ });
+  
+pad_button_left.addEventListener('click', () => {
+	currentID = currentID - 1;
+	let apiUrl = `https://pokeapi.co/api/v2/pokemon/${currentID}`  
+	fetch(apiUrl);
+	console.log(apiUrl)
+	getData(currentID)
+});
 
+
+//changement des sprites à venir
 function currentPokemon(getData) {
 	console.log(getData)
 	let pokemonSprite ={
@@ -58,25 +78,6 @@ function changeSprite(sprites) {
 	imageDiv.innerHTML = pokemonSprite
 }
 
-///////ci-dessous code source  https://codepen.io/victorharry/pen/vYNorav ///////
-
-/* right and left buttons change the id of the pokemon */
-pad_button_right.addEventListener('click', () => {  
-	currentID = currentID + 1;
-	let apiUrl = `https://pokeapi.co/api/v2/pokemon/${currentID}`  
-	fetch(apiUrl);
-	console.log(apiUrl)
-	getData(currentID)
- });
-  
-pad_button_left.addEventListener('click', () => {
-	currentID = currentID - 1;
-	let apiUrl = `https://pokeapi.co/api/v2/pokemon/${currentID}`  
-	fetch(apiUrl);
-	console.log(apiUrl)
-	getData(currentID)
-  });
-
 /* top and bottom buttons change the sprites of the pokemon */
 pad_button_top.addEventListener('click', () => {
 	let pokemonSprite;
@@ -96,19 +97,32 @@ pad_button_top.addEventListener('click', () => {
 // 	getData(currentID)
 // });
   
-//sound b
+//ajout de sons à venir
+// function getAudio(sound_1){
+// 	document.getAudio('media/sound_1.mp3').play();
+// }
+
+// let Sound = {
+//     audio: null,
+//     play: function(path) {
+//         this.audio = new Audio('media/sound_1.mp3');
+//         if(this.audio !== null) this.audio.pause();
+//         this.audio.play();
+//     }
+// };
+// Sound.play("clicked.webm");
+
+//sound 1 button a
+// a_button.addEventListener('click', () => {
+// 	let getAudio;
+// 	getAudio.play(sound_1);
+//});
+
+//sound 2 button b
 // b_button.addEventListener('click', () => {
 // 	if(greetings.style.display == 'none') {
 // 	  details_container.style.display = 'none';
 // 	  content_container.style.display = 'flex';
 // 	}
-//   });
+//});
 
-//sound a
-// a_button.addEventListener('click', () => {
-// 	if(greetings.style.display == 'none') {
-// 	  content_container.style.display = 'none';
-// 	  details_container.style.display = 'flex';
-// 	}
-  
-//   });
