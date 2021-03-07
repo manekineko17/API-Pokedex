@@ -23,8 +23,10 @@ function generateHtml(getData) {
 		<div id="image_and_name">
 			<img id="image_pokemon" src=${getData.sprites.front_default} alt="Pokemon picture">
 			<p id="name">${getData.name}</p>
-			<div id="height">Height : ${(getData.height/10)} m</div>
-			<div id="weight">Weight : ${(getData.weight/10)} kg</div>
+			<div id="height_weight">
+				<div id="height">Height : ${(getData.height/10)} m</div>
+				<div id="weight">Weight : ${(getData.weight/10)} kg</div>
+			</div>
 		</div>
 	`
 	let pokemonDiv = document.querySelector('.pokemon') //we take the pokemon class from the html
@@ -32,7 +34,7 @@ function generateHtml(getData) {
 }
 
 /* right and left buttons change the id of the pokemon */
-pad_button_right.addEventListener('click', () => {  
+button_right.addEventListener('click', () => {  
 	currentID = currentID + 1;
 	let apiUrl = `https://pokeapi.co/api/v2/pokemon/${currentID}`  
 	fetch(apiUrl);
@@ -40,7 +42,7 @@ pad_button_right.addEventListener('click', () => {
 	getData(currentID)
  });
   
-pad_button_left.addEventListener('click', () => {
+button_left.addEventListener('click', () => {
 	currentID = currentID - 1;
 	let apiUrl = `https://pokeapi.co/api/v2/pokemon/${currentID}`  
 	fetch(apiUrl);
@@ -63,66 +65,4 @@ function currentPokemon(getData) {
 	setValues()
 }
 
-function changeSprite(sprites) {
-	if(currentID){
-		let sprites = [
-		currentID.sprite_front,
-		currentID.sprite_back,
-		currentID.sprite_front_shiny,
-		currentID.sprite_back_shiny,
-		]
-		sprites.src = sprites[sprites]
-	}
-	console.log(pokemonSprite)
-	let imageDiv = document.querySelector('.pokemon') 
-	imageDiv.innerHTML = pokemonSprite
-}
-
-/* top and bottom buttons change the sprites of the pokemon */
-pad_button_top.addEventListener('click', () => {
-	let pokemonSprite;
-	// let sprites;
-	let apiUrl = `https://pokeapi.co/api/v2/pokemon/${currentID}`
-	sprites = sprites + 1;
-	fetch(apiUrl);
-	console.log(changeSprite)
-	sprites = (sprites <= 0) ? 0 : pokemonSprite;
-	changeSprite(sprites)
-});
-  
-// pad_button_bottom.addEventListener('click', () => {
-// 	currentSprite = currentSprite - 1;
-// 	currentSprite = (currentSprite <= 0) ? 0 : currentSprite;
-// 	changeSprite();
-// 	getData(currentID)
-// });
-  
-//ajout de sons à venir
-// function getAudio(sound_1){
-// 	document.getAudio('media/sound_1.mp3').play();
-// }
-
-// let Sound = {
-//     audio: null,
-//     play: function(path) {
-//         this.audio = new Audio('media/sound_1.mp3');
-//         if(this.audio !== null) this.audio.pause();
-//         this.audio.play();
-//     }
-// };
-// Sound.play("clicked.webm");
-
-//sound 1 button a
-// a_button.addEventListener('click', () => {
-// 	let getAudio;
-// 	getAudio.play(sound_1);
-//});
-
-//sound 2 button b
-// b_button.addEventListener('click', () => {
-// 	if(greetings.style.display == 'none') {
-// 	  details_container.style.display = 'none';
-// 	  content_container.style.display = 'flex';
-// 	}
-//});
 
