@@ -29,7 +29,6 @@ function generateHtml(getData) {
 				<div id="ability">Ability : ${(getData.abilities[0].ability.name)} </div>
 				<div class="moves">Move 1 : ${(getData.moves[0].move.name)}</div>
 				<div class="moves">Move 2 : ${(getData.moves[1].move.name)}</div>
-				<div class="moves">Move 3 : ${(getData.moves[2].move.name)}</div>
 			</div>
 		</div>
 	`

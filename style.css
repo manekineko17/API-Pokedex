@@ -115,7 +115,7 @@ h1 {
   }
 
   #description {
-    font-size: 40px;
+    font-size: 25px;
     padding: 6%;
   }
 
@@ -141,6 +141,18 @@ h1 {
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
     border-right: 50px solid black;
+  }
+}
+
+/***************************************************/
+@media all and (min-width: 800px) {
+  #description {
+    font-size: 30px;
+    padding: 8%;
+  }
+
+  #name {
+    font-size: 50px;
   }
 }
 
