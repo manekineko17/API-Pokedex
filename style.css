@@ -4,23 +4,25 @@
 }
 
 body {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  font-family: Verdana, sans-serif;
+  background: rgb(210, 232, 113);
+  background: linear-gradient(
+    90deg,
+    rgba(210, 232, 113, 1) 20%,
+    rgba(215, 233, 200, 1) 73%,
+    rgba(177, 223, 232, 1) 100%
+  );
 }
 
-body {
-  background: repeating-linear-gradient(
-    to bottom,
-    red 0%,
-    red 49.5%,
-    black 49.5%,
-    black 50%,
-    white 50%,
-    white 100%
-  );
-  /* width: 100%; */
-  /* height: 100%; */
-  font-family: Verdana, sans-serif;
+h1 {
+  font-style: italic;
+  text-align: center;
+  font-size: 20px;
+  margin: 3%;
+  border-radius: 15px;
+  background: white;
 }
 
 .pokemon {
@@ -30,35 +32,35 @@ body {
   justify-content: space-around;
   align-content: center;
   align-items: center;
-  border-style: solid;
-  border-width: 4px;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
   border-radius: 15px;
-  color: black;
-  background-color: white;
-  width: 80%;
+  background: white;
+  width: 90%;
   margin: auto;
   margin-top: 10%;
-  padding-bottom: 40%;
+  padding-bottom: 15%;
   text-align: center;
   font-size: 30px;
 }
 
-/*cadre height_weight*/
-#height_weight {
-  border-style: solid;
-  border-width: 4px;
+#description {
   border-radius: 15px;
-  color: black;
-  padding: 5%;
-  margin: auto;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+  background: rgb(210, 232, 113);
+  background: linear-gradient(
+    90deg,
+    rgba(210, 232, 113, 1) 20%,
+    rgba(215, 233, 200, 1) 73%,
+    rgba(177, 223, 232, 1) 100%
+  );
+  padding: 6%;
   width: 90%;
-  font-size: 60%;
-  text-align: center;
+  text-align: left;
   vertical-align: center;
 }
 
 #image_pokemon {
-  width: 100%;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -79,16 +81,18 @@ body {
   width: 100%;
   padding: 1%;
   margin: 1%;
-  background-color: white;
+  margin-top: 8%;
+  margin-bottom: 40%;
+  background-color: transparent;
 }
 
 /* BUTTON RIGHT*/
 #button_right {
   width: 0;
   height: 0;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-left: 50px solid red;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 30px solid black;
   margin-left: 1em;
 }
 
@@ -96,8 +100,8 @@ body {
 #button_left {
   width: 0;
   height: 0;
-  border-top: 30px solid transparent;
-  border-bottom: 30px solid transparent;
-  border-right: 50px solid red;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 30px solid black;
   margin-right: 1em;
 }
