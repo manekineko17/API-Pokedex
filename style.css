@@ -75,22 +75,27 @@ main {
   border-style: solid;
   border-width: 5px;
   color: black;
-  padding: 2% 5% 10% 5%;
+  padding: 5%;
+  margin: auto;
+  max-width: 80%;
+}
+/*text height et weigth*/
+#height,
+#weight {
+  vertical-align: center;
+
 }
 #image_pokemon {
   width: 300px;
   height: auto;
 }
 #name {
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 10%;
 }
-#height,
-#weight {
-  margin-top: 10%;
-}
+
 
 #fond_rayures {
   z-index: 2; /* fond_rouge au-dessus de fond blanc */
