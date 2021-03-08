@@ -8,14 +8,12 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  /* height: max-content; */
 }
 
 body {
   height: 100%;
   height: max-content;
   font-family: Verdana, sans-serif;
-  /* font-size: 100%; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -26,16 +24,9 @@ body {
 
 main {
   width: 100%;
-  flex: 1;
-  /* display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center; */
   background-color: white;
 }
-
+/*main*/
 #fond_rouge_blanc {
   display: flex;
   flex-direction: column;
@@ -47,6 +38,7 @@ main {
 }
 
 .pokemon {
+  z-index: 3;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -54,48 +46,42 @@ main {
   align-content: center;
   align-items: center;
   border-style: solid;
-  border-width: 5px;
+  border-width: 4px;
   color: black;
   background-color: white;
   max-width: 80%;
-  /* height: 160px; */
-  /* height: auto; */
-  /* margin: 10% 5% 10% 5%; */
-  /* padding: 60% 5% 60% 5%; */
   margin: auto;
-  margin-top: 5%;
-
-  padding-bottom: 5%;
+  margin-top: 10%;
+  padding-bottom: 10%;
   text-align: center;
   font-size: 30px;
+  /* height: 150%; */
 }
 
 /*cadre height_weight*/
 #height_weight {
   border-style: solid;
-  border-width: 5px;
+  border-width: 4px;
   color: black;
   padding: 5%;
   margin: auto;
   max-width: 80%;
-}
-/*text height et weigth*/
-#height,
-#weight {
+  font-size: 70%;
+  text-align: center;
   vertical-align: center;
+}
 
-}
 #image_pokemon {
-  width: 300px;
-  height: auto;
+  width: 100%;
+  text-align: center;
 }
+
 #name {
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 10%;
 }
-
 
 #fond_rayures {
   z-index: 2; /* fond_rouge au-dessus de fond blanc */
@@ -108,7 +94,8 @@ main {
   );
   border-bottom: 5px solid black;
   width: 100%;
-  height: 20em;
+  /* height: 25em; */
+  height: 50%;
 }
 
 #fond_blanc {
@@ -117,6 +104,7 @@ main {
 }
 
 #buttons {
+  z-index: 4;
   flex: 2;
   display: flex;
   flex-direction: row;
@@ -124,7 +112,7 @@ main {
   justify-content: space-between;
   align-items: center;
   align-content: space-between;
-  margin-top: 10%;
+  margin: auto;
 }
 
 /*BUTTON RIGHT*/
@@ -132,9 +120,9 @@ main {
     flex: 1;
     width: 0; 
     height: 0; 
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    border-left: 80px solid red;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 50px solid red;
     margin-left: 1em;
 }
 
@@ -143,9 +131,9 @@ main {
     flex: 2;
     width: 0; 
     height: 0; 
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent; 
-    border-right:80px solid red;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent; 
+    border-right:50px solid red;
     margin-right: 1em;
 
 }
