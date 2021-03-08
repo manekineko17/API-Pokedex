@@ -3,42 +3,27 @@
   padding: 0;
 }
 
-html,
 body {
   height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  height: 100%;
-  height: max-content;
-  font-family: Verdana, sans-serif;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-}
-
-main {
   width: 100%;
-  background-color: white;
 }
-/*main*/
-#fond_rouge_blanc {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  height: 100%;
+
+body {
+  background: repeating-linear-gradient(
+    to bottom,
+    red 0%,
+    red 49.5%,
+    black 49.5%,
+    black 50%,
+    white 50%,
+    white 100%
+  );
+  /* width: 100%; */
+  /* height: 100%; */
+  font-family: Verdana, sans-serif;
 }
 
 .pokemon {
-  z-index: 3;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -47,26 +32,27 @@ main {
   align-items: center;
   border-style: solid;
   border-width: 4px;
+  border-radius: 15px;
   color: black;
   background-color: white;
-  max-width: 80%;
+  width: 80%;
   margin: auto;
   margin-top: 10%;
-  padding-bottom: 10%;
+  padding-bottom: 40%;
   text-align: center;
   font-size: 30px;
-  /* height: 150%; */
 }
 
 /*cadre height_weight*/
 #height_weight {
   border-style: solid;
   border-width: 4px;
+  border-radius: 15px;
   color: black;
   padding: 5%;
   margin: auto;
-  max-width: 80%;
-  font-size: 70%;
+  width: 90%;
+  font-size: 60%;
   text-align: center;
   vertical-align: center;
 }
@@ -80,131 +66,38 @@ main {
   font-size: 30px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 10%;
-}
-
-#fond_rayures {
-  z-index: 2; /* fond_rouge au-dessus de fond blanc */
-  background: repeating-linear-gradient(
-    -45deg,
-    red,
-    red 5px,
-    white 5px,
-    white 15px
-  );
-  border-bottom: 5px solid black;
-  width: 100%;
-  /* height: 25em; */
-  height: 50%;
-}
-
-#fond_blanc {
-  z-index: 1;
-  height: 16em;
+  margin-bottom: 15%;
 }
 
 #buttons {
-  z-index: 4;
-  flex: 2;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  align-content: space-between;
-  margin: auto;
+  align-content: center;
+  width: 100%;
+  padding: 1%;
+  margin: 1%;
+  background-color: white;
 }
 
-/*BUTTON RIGHT*/
-#button_right{
-    flex: 1;
-    width: 0; 
-    height: 0; 
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
-    border-left: 50px solid red;
-    margin-left: 1em;
+/* BUTTON RIGHT*/
+#button_right {
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 50px solid red;
+  margin-left: 1em;
 }
 
 /*BUTTON LEFT*/
 #button_left {
-    flex: 2;
-    width: 0; 
-    height: 0; 
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent; 
-    border-right:50px solid red;
-    margin-right: 1em;
-
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-right: 50px solid red;
+  margin-right: 1em;
 }
-/*******************************************/
-
-@media /*screen*/ all and (max-width: 500px) {
-}
-
-/*******************************************/
-
-/*tablet :on screens that are min 376px, set the followings*/
-/* @media screen and (max-width: 1094px) and (min-width: 834px) { */
-  /* .pokemon {
-    border-width: 8px;
-    font-size: 35px;
-  }
-  #image_and_name {
-    margin: 0;
-    padding: 0;
-  }
-  #image_pokemon {
-    width: 400px;
-    height: auto;
-  }
-  #name {
-    font-size: 45px;
-  }
-  #fond_rayures {
-    background: repeating-linear-gradient(
-      -45deg,
-      red,
-      red 7px,
-      white 5px,
-      white 23px
-    );
-    border-bottom: 8px solid black;
-    height: 26em;
-  }
-  #fond_blanc {
-    height: 28em;
-  }
-  */
-
-/****************************************************/
-
-/*desktop: on screens that are 1094px or more, set the followings */
-@media screen and (min-width: 1094px) {
-  /* .pokemon {
-    width: min-content;
-    font-size: 40px;
-    border: 8px solid black;
-  }
-  #image_pokemon {
-    width: 500px;
-  }
-  #name {
-    font-size: 55px;
-  }
-  #fond_rayures {
-    background: repeating-linear-gradient(
-      -45deg,
-      red,
-      red 7px,
-      white 5px,
-      white 23px
-    );
-    border-bottom: 8px solid black;
-    height: 38em;
-  }
-  #fond_blanc {
-    height: 17em;
-  }
- 
-} */
